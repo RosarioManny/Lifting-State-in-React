@@ -3,10 +3,10 @@ const BurgerStack = (props) => {
 
     return (
       <ul>
-        {props.stack.map((ingredient, idx) => (
+        {props.updatedStack.map((ingredient, idx) => (
           <li key={idx}>
             {ingredient.name}
-            <button onClick={props.removeBurger}>-</button>
+            <button onClick={props.removeBurger}>x</button>
           </li>
       ))}
       </ul>

@@ -1,14 +1,14 @@
 // Access to list of ingredients(stockedIngredients) & updatedStack().
-const IngredientList = ({stockedIngredients}) => {
+const IngredientList = (props) => {
 
 
 
     return (
       <ul>
-        {stockedIngredients.map((ingredient, idx) => (
-          <li key={idx}>
+        {props.stockedIngredients.map((ingredient, idx) => (
+          <li key={idx} style={{ backgroundColor: ingredient.color}}>
             {ingredient.name}
-            <button onClick={updatedStack} >+</button>
+            <button onClick={props.updatedStack}>+</button>
           </li>
         ))}
       </ul>
