@@ -1,14 +1,16 @@
 const IngredientList = (props) => {
 
-  // const availableIngredients = () => {
-  //   console.log(ingredients)
-  // }
+  const addToStack = () => {
+    return("hello")
+  };
 
     return (
     <ul>
       {props.stockedIngredients.map((ingredient) => (
         <li key={ingredient.name} >
           {ingredient.name}
+
+          <button>+</button>
         </li>
       ))}
     </ul>

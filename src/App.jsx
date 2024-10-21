@@ -23,12 +23,12 @@ export const stockedIngredients = [
 const App = () => {
   const [stack, setStack] = useState([]);
 
-  const addBurgerStack = () => {
+  const removeFromStack = () => {
 
   };
 
-  const addIngredient = () => {
-
+  const addToStack = () => {
+    setStack([...stack, add])
   };
 
 
