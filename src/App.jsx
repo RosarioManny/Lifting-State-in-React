@@ -24,7 +24,8 @@ const App = () => {
   const [stack, setStack] = useState([]);
 
   const updatedStack = (ingredient) => {
-    setStack([...stack, ingredient])
+    // selectedIngredient = ingredient.name
+    setStack([...stack, ingredient.name])
   };
 
   const removeBurger = (ingredient, idx) => {
