@@ -1,19 +1,22 @@
-// Have access to updatedStack and removeBurger()
+// Have access to stack and removeBurger()
+import '../App.css'
+
 const BurgerStack = (props) => {
-  // const { updatedStack, removeBurger } = props 
 
     return (
       <ul>
-        {props.updatedStack.map((ingredient, idx) => (
+        {props.stack.map((ingredient, idx) => (
           <li 
-            key={idx} 
+            key={idx}
+            style={{ background: ingredient.color}}
+            onClick={() => props.removeBurger(ingredient, idx)}
           >
             {ingredient.name} 
-            <button onClick={props.removeBurger}>x</button>
+            <button>X</button>
           </li>
       ))}
       </ul>
-    );a
+    );
   };
   
   export default BurgerStack;

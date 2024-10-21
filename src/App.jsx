@@ -1,6 +1,6 @@
-import IngredientList from './components/IngredientList'
+import IngredientList from './components/IngredientList';
 import BurgerStack from './components/BurgerStack';
-import { useState } from 'react'
+import { useState } from 'react';
 import './App.css';
 
 export const stockedIngredients = [
@@ -23,13 +23,12 @@ export const stockedIngredients = [
 const App = () => {
   const [stack, setStack] = useState([]);
 
-  const updatedStack = (ingredient) => {
-    // selectedIngredient = ingredient.name
-    setStack([...stack, ingredient.name])
+  const addBurger = (ingredient) => {
+    setStack([...stack, ingredient])
   };
 
   const removeBurger = (ingredient, idx) => {
-    setStack(stack.filter((ingredients, i) => i !== idx))
+    setStack(stack.filter((ing, i) => i !== idx))
   };
 
   return (
@@ -38,10 +37,10 @@ const App = () => {
       <section>
         <IngredientList 
           stockedIngredients={stockedIngredients} 
-          updatedStack={updatedStack}
+          addBurger={addBurger}
         />
         <BurgerStack 
-          updatedStack={stack} 
+          stack={stack} 
           removeBurger={removeBurger}
         />
       </section>
