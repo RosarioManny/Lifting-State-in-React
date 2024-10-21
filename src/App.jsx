@@ -3,7 +3,7 @@ import BurgerStack from './components/BurgerStack';
 import IngredientList from './components/IngredientList'
 import { useState } from 'react'
 
-export const availableIngredients = [
+export const stockedIngredients = [
   { name: 'Kaiser Bun', color: 'saddlebrown' },
   { name: 'Sesame Bun', color: 'sandybrown' },
   { name: 'Gluten Free Bun', color: 'peru' },
@@ -21,7 +21,7 @@ export const availableIngredients = [
 ];
 
 const App = () => {
-  [stack, setStack] = { useState };
+  const [stack, setStack] = useState([]);
 
   const addBurgerStack = () => {
 
@@ -32,12 +32,12 @@ const App = () => {
   };
 
 
-
   return (
     <main>
       <h1>Burger Stacker</h1>
       <section>
-      {/* List & Stack components */}
+        <IngredientList stockedIngredients={stockedIngredients}/>
+        <BurgerStack />
       </section>
     </main>
   );
