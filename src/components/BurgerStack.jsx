@@ -1,15 +1,12 @@
+// Have access to updatedStack and removeBurger()
 const BurgerStack = (props) => {
 
-  const removeFromStack = () => {
+  console.log(props.stack) 
 
-  };
  
     return (
-      // {map.props.\}
       <ul>
-        <li>
-          <button>x</button>
-        </li>
+         
       </ul>
     );
   };
